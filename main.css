@@ -1,0 +1,143 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preta);
+    font-family: 'Times new roman';
+    color: white;
+}
+
+
+/*elementos de cabeçalho*/
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+    margin-left: 15px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #fff;
+} 
+
+/*elementos do filme pricipal*/
+
+.filme_principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url(imagens/Vingadores_ultimato.jpg);
+    background-size: cover;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.filme_principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulofilmeprincipal {
+    margin-top: 10%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size:12px;
+    cursor: pointer;
+    transition: .7s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.filme_principal .container {
+    margin-left: 15px;
+    width: 60%;
+}
+
+/*Elementos de carrossel*/
+
+.carrosel{
+    margin: 5px 15px;
+}
+
+.carrosel h4 {
+    text-decoration: none;
+    color: #AAA;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    font-style: "times new roman";
+    font-size: 20px;
+    
+}
+
+.box_carrossel{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.box_carrossel:hover {
+    border: white 2px solid;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 740px) {
+    header .container{
+        display: flex;
+        flex-direction:column;
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 300px;
+    }
+    
+    .filme_principal .descricao {
+        margin-bottom: 20px;
+    }
+    
+    .filme_principal .container {
+        margin-left: 15px;
+        width: 80%;
+    }
+}
